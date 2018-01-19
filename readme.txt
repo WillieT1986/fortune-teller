@@ -80,6 +80,7 @@ Stretch Tasks (Optional)
 Tip: To do this with the prompts that expect an integer, you will need to read in a String, check for “Quit”, then use Integer.parseInt(value) to convert the user input to an int.
 
 Also tip: You can call System.exit(0); to terminate your program immediately.
+
 [ ] Research while (page 115 in the Head Start book) or do/while loops and use them to check whether a user typed “Help” for favorite color, printing the list of colors each time the user types “Help”.
 
   What is your favorite ROYGBIV color?

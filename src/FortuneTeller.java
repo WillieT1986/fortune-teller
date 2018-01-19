@@ -11,8 +11,6 @@ public class FortuneTeller {
 		System.out.println("Enter Last Name: ");
 		String lastName = input.nextLine();
 
-		// Should we greet user firstName lastName?
-
 		System.out.println("Enter your age: "); // retirement age is 67
 		int age = input.nextInt();
 
@@ -33,7 +31,7 @@ public class FortuneTeller {
 			bankBalance = "$1,000,000.03";
 		} else if ((birthMonth == 10) || (birthMonth == 11) || (birthMonth == 12)) {
 			bankBalance = "$1,250,000.04";
-		} else if (birthMonth > 12 && < 1) {
+		} else if ((birthMonth > 12) || (birthMonth < 1)) {
 			System.out.println("Enter a birth month between 1 & 12");
 		}
 
@@ -42,7 +40,7 @@ public class FortuneTeller {
 		String roygbiv = input.next();
 		String vic = "";
 
-		switch (roygbiv) {
+		switch (roygbiv.toLowerCase()) {
 		case "red":
 			vic = "2017 Dodge Challenger R/T";
 			break;
@@ -73,9 +71,9 @@ public class FortuneTeller {
 		String location = "";
 
 		if (sibling >= 0) {
-			location = "Look up coordinates: 32.329030, -64.782563";
+			location = "coordinates: 32.329030, -64.782563";
 		} else if (sibling == 1) {
-			location = "Osaka, Japan";
+			location = "Da Nang, Vietnam";
 		} else if (sibling == 2) {
 			location = "Ho Chi Minh City, Vietnam";
 		} else if (sibling == 3) {
@@ -85,8 +83,9 @@ public class FortuneTeller {
 		}
 
 		// Display the user’s fortune in this format:
-		System.out.println(firstName + " " + lastName + " will retire in " + (67 - age) + " years with "
-				+ bankBalance + " in the bank, a vacation home in " + location + ", and travel in a " + vic);
+		System.out.print(firstName + " " + lastName + " will retire in " + (67 - age));
+		System.out.print(" years with " + bankBalance + " in the bank, a vacation home in ");
+		System.out.println(location + ", and travel in a " + vic);
 
 		input.close();
 	}
