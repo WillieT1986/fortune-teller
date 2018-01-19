@@ -13,39 +13,82 @@ public class FortuneTeller {
 
 		// Should we greet user firstName lastName?
 
-		System.out.println("Enter your age: ");
-		String age = input.nextLine(); //int
+		System.out.println("Enter your age: "); // retirement age is 67
+		int age = input.nextInt();
 
-		System.out.println("What is your Birth Month? ");
-		String birthMonth = input.nextLine(); //int
+		if (age % 2 != 0) { // age is odd
+		} else if (age % 2 == 0) { // age is even
+		}
 
-		// int january = 1;
-		// int february = 2;
-		// int march = 3;
-		// int april = 4;
-		// int may = 5;
-		// int june = 6;
-		// int july = 7;
-		// int august = 8;
-		// int september = 9;
-		// int october = 10;
-		// int november = 11;
-		// int december = 12;
+		System.out.println("What is your Birth Month in mm status?");
+		System.out.println("Example: January would be 1");
+		int birthMonth = input.nextInt();
+		String bankBalance = "";
+
+		if ((birthMonth == 1) || (birthMonth == 2) || (birthMonth == 3)) {
+			bankBalance = "$500,000.01";
+		} else if ((birthMonth == 4) || (birthMonth == 5) || (birthMonth == 6)) {
+			bankBalance = "$750,000/02";
+		} else if ((birthMonth == 7) || (birthMonth == 8) || (birthMonth == 9)) {
+			bankBalance = "$1,000,000.03";
+		} else if ((birthMonth == 10) || (birthMonth == 11) || (birthMonth == 12)) {
+			bankBalance = "$1,250,000.04";
+		}
 
 		System.out.println("What is your favorite ROYGBIV color? ");
 		System.out.println("If unsure please type in Help.");
 		String roygbiv = input.nextLine();
+		String vic = "";
+
+		switch (roygbiv) {
+		case "red":
+			vic = "2017 Dodge Challenger R/T";
+			break;
+		case "orange":
+			vic = "1980 Pontiac Trans Am";
+			break;
+		case "yellow":
+			vic = "2018 Volkswagon Beetle";
+			break;
+		case "green":
+			vic = "1993 AM General M998 Humvee HMMWV";
+			break;
+		case "blue":
+			vic = "2018 Chevy Volt";
+			break;
+		case "indigo":
+			vic = "Tesla Model S";
+			break;
+		case "violet":
+			vic = "Tesla Model X";
+			break;
+		case "help":
+			System.out.println("ROYGBIV stands for Red, Orange, Yellow, Green, Blue, Indigo & Violet.");
+
+		}
 
 		System.out.println("How many Siblings?");
-		String sibling = input.nextLine(); //int
-		// Should I do a simple number and output the answer or should I ask yes or no
-		// and then ask for a number of siblings?
+		int sibling = input.nextInt();
+		String location = "";
+		
+		if (sibling >= 0) {
+			location = "Look up coordinates: 32.329030, -64.782563";
+		} else if (sibling == 1) {
+			location = "Osaka, Japan";
+		} else if (sibling == 2) {
+			location = "Ho Chi Minh City, Vietnam";
+		} else if (sibling == 3) {
+			location = "Victoria, Seychelles";
+		} else if (sibling >3) {
+			location = "The Bahamas";
+		}
+		
 
+		
+	
+		
 		// Display the user’s fortune in this format:
-
-		// System.out.println(firstName + lastName + " will retire in " + [birthMonth] +
-		// " number of years with " + [bankBalance] + " in the bank, a vacation home in
-		// " + [location] + ", and travel by " + [modeOfTrans] + ".");
+		System.out.println(firstName + lastName + " will retire in " + (67 - age) + " number of years with " + bankBalance + " in the bank, a vacation home in" + location + ", and travel by " + vic);
 
 		input.close();
 	}

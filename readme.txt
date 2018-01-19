@@ -73,13 +73,12 @@ a vacation home in *[location]*, and travel by *[mode of transporation]*.
 
 Your program should be able to process input whether a user enters capital or lowercase letters.
 
-Grading
-Find the rubric here.
 
 Stretch Tasks (Optional)
 [ ] Give the user the ability to quit the program by typing “Quit” (should not be case sensitive) at any point where the program is looking for user input. The program should print “Nobody likes a quitter…” before ending.
 
 Tip: To do this with the prompts that expect an integer, you will need to read in a String, check for “Quit”, then use Integer.parseInt(value) to convert the user input to an int.
+
 Also tip: You can call System.exit(0); to terminate your program immediately.
 [ ] Research while (page 115 in the Head Start book) or do/while loops and use them to check whether a user typed “Help” for favorite color, printing the list of colors each time the user types “Help”.
 
@@ -91,6 +90,7 @@ Also tip: You can call System.exit(0); to terminate your program immediately.
   Blue
 
 
+GRADING
 
 Rubric for Fortune Teller
 
