@@ -33,11 +33,13 @@ public class FortuneTeller {
 			bankBalance = "$1,000,000.03";
 		} else if ((birthMonth == 10) || (birthMonth == 11) || (birthMonth == 12)) {
 			bankBalance = "$1,250,000.04";
+		} else if (birthMonth > 12 && < 1) {
+			System.out.println("Enter a birth month between 1 & 12");
 		}
 
 		System.out.println("What is your favorite ROYGBIV color? ");
 		System.out.println("If unsure please type in Help.");
-		String roygbiv = input.nextLine();
+		String roygbiv = input.next();
 		String vic = "";
 
 		switch (roygbiv) {
@@ -60,17 +62,16 @@ public class FortuneTeller {
 			vic = "Tesla Model S";
 			break;
 		case "violet":
-			vic = "Tesla Model X";
+			vic = "Hot Air Baloon";
 			break;
 		case "help":
 			System.out.println("ROYGBIV stands for Red, Orange, Yellow, Green, Blue, Indigo & Violet.");
-
 		}
 
 		System.out.println("How many Siblings?");
 		int sibling = input.nextInt();
 		String location = "";
-		
+
 		if (sibling >= 0) {
 			location = "Look up coordinates: 32.329030, -64.782563";
 		} else if (sibling == 1) {
@@ -79,16 +80,13 @@ public class FortuneTeller {
 			location = "Ho Chi Minh City, Vietnam";
 		} else if (sibling == 3) {
 			location = "Victoria, Seychelles";
-		} else if (sibling >3) {
+		} else if (sibling > 3) {
 			location = "The Bahamas";
 		}
-		
 
-		
-	
-		
 		// Display the user’s fortune in this format:
-		System.out.println(firstName + lastName + " will retire in " + (67 - age) + " number of years with " + bankBalance + " in the bank, a vacation home in" + location + ", and travel by " + vic);
+		System.out.println(firstName + " " + lastName + " will retire in " + (67 - age) + " years with "
+				+ bankBalance + " in the bank, a vacation home in " + location + ", and travel in a " + vic);
 
 		input.close();
 	}
