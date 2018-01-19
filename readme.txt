@@ -12,13 +12,13 @@ Strings
 
 Tasks
 Part 1
-[ ] Ask the user for the user’s first name. 																		(6pts)
-[ ] Ask the user for the user’s last name.  																		(6pts)
-[ ] Ask the user for the user’s age.																				(6pts)
-[ ] Ask the user for the user’s birth month (as an ‘int’). 															(6pts)
-[ ] Ask the user for the user’s favorite ROYGBIV color. 															(6pts)
-[ ] If the user does not know what ROYGBIV is, ask the user to enter “Help” to get a list of the ROYGBIV colors.	(6pts)
-[ ] Ask the user for the user’s number of siblings. 																(6pts)
+[ ] Ask the user for the user’s first name. 																	
+[ ] Ask the user for the user’s last name.  																	
+[ ] Ask the user for the user’s age.																			
+[ ] Ask the user for the user’s birth month (as an ‘int’). 														
+[ ] Ask the user for the user’s favorite ROYGBIV color. 														
+[ ] If the user does not know what ROYGBIV is, ask the user to enter “Help” to get a list of the ROYGBIV colors.
+[ ] Ask the user for the user’s number of siblings. 																
 
 Part 2
 For each of the below, you will select your own value for each condition. 
