@@ -71,13 +71,13 @@ public class FortuneTeller {
 		String location = "";
 
 		if (sibling >= 0) {
-			location = "coordinates: 32.349522, -64.713362";
+			location = "coordinates: 32.349522, -64.713362"; //Seychelles (Islands located East of Kenya)
 		} else if (sibling == 1) {
 			location = "Da Nang, Vietnam";
 		} else if (sibling == 2) {
 			location = "Ho Chi Minh City, Vietnam";
 		} else if (sibling == 3) {
-			location = "Victoria, Seychelles";
+			location = "coordinates: 32.292554, -64.763035"; //Bermuda
 		} else if (sibling > 3) {
 			location = "The Bahamas";
 		}
