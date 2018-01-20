@@ -32,7 +32,7 @@ public class FortuneTeller {
 		} else if ((birthMonth == 10) || (birthMonth == 11) || (birthMonth == 12)) {
 			bankBalance = "$1,250,000.04";
 		} else if ((birthMonth > 12) || (birthMonth < 1)) {
-			System.out.println("Enter a birth month between 1 & 12");
+			bankBalance = "$0.00";
 		}
 
 		System.out.println("What is your favorite ROYGBIV color? ");
@@ -71,7 +71,7 @@ public class FortuneTeller {
 		String location = "";
 
 		if (sibling >= 0) {
-			location = "coordinates: 32.329030, -64.782563";
+			location = "coordinates: 32.349522, -64.713362";
 		} else if (sibling == 1) {
 			location = "Da Nang, Vietnam";
 		} else if (sibling == 2) {
