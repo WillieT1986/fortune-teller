@@ -1,115 +1,110 @@
-1st Weekend Project - Fortune Teller
+			Week 1 Weekend Project - Fortune Teller
 
 Overview
-
-Develop a console application that will tell the user’s fortune based on data received from the user.
+For my first weekend project,
+The User will enter there First & Last name along with their Age, 
+Birth Month, Favorite ROYGBIV color and Number of Siblings. 
+Once the data is collected the program will greet the User and tell 
+them how many years they have left to retire, how much money they 
+have in their bank account, the location that he or she will live and 
+their mode of transportation. 
 
 Skills Required
-Variables and Basic Types
-Operators and Expressions
-Conditionals
-Strings
+For this project, I will be utilizing the skills learned from the 
+first week of class which consisted of:
+1. Variables and Basic Types
+2. Operators and Expressions
+3. Conditionals
+4. Strings
 
-Tasks
-[X]Part 1
-   [X] Ask the user for the user’s first name. 																	
-   [X] Ask the user for the user’s last name.  																	
-   [X] Ask the user for the user’s age.																			
-   [X] Ask the user for the user’s birth month (as an ‘int’). 														
-   [X] Ask the user for the user’s favorite ROYGBIV color. 														
-   [X] If the user does not know what ROYGBIV is, ask the user to enter “Help” to get a list of the ROYGBIV colors.
-   [X] Ask the user for the user’s number of siblings. 																
+Skills (Optional)
+Stretch goals to utilizing:
+1. To do this with the prompts that expect an integer, you will need 
+to read in a String, check for “Quit”, then use 
+Integer.parseInt(value) to convert the user input to an int.
+2. System.exit(0); to terminate your program immediately.
+3. Do/While Loops.
 
-[X]Part 2
-For each of the below, you will select your own value for each condition. 
-The table will give the conditions and an example for each. Don’t steal our examples—be creative!
+Part 1
+The information needed from the User:
 
-  [X]Retirement Years
-   The user’s number of years until retirement will be based on whether the user’s age is odd or even.
+[X] Ask the user for the user’s First Name. 																	
+[X] Ask the user for the user’s Last Name.  																	
+[X] Ask the user for the user’s Age.																			
+[X] Ask the user for the user’s Birth Month (as an ‘int’). 														
+[X] Ask the user for the user’s Favorite ROYGBIV color. 														
+[X] If the user does not know what ROYGBIV is, ask the user to enter 
+    “Help” to get a list of the ROYGBIV colors.
+[X] Ask the user for the user’s Number of Siblings. 	
 
-   (condition) If the user’s age is…	(example) then the user will retire in…
-   odd	    14 years
-   even	12 years
+Part 2
+Once the Age, Birth Month, Favorite ROYGBIV & Siblings information is
+entered they will trigger certain conditions. For Example:
 
-   [X]Vacation Home Location
-    The location of the user’s vacation home will be based on how many siblings the user has. 
-    If the user enters a number less than zero, give the user a bad location!
+[X] Age will trigger how many years till he or she retires at 67.
+[X] Birth Month entered as a number between 1 through 12 will trigger
+how much money they will have.
+[X] Favorite ROYGBIV will trigger his or her mode of transportation.
+[X] Sibling amount will trigger where they live. 
+    (Will you trigger the location listed as coordinates?) 
 
-   (condition) If the user’s number of siblings is…	(example) then the user’s vacation home will be in…
-               0	                                                Boca Raton, FL
-			   1													Nassau, Bahamas
-			   2													Ponta Negra,Brazil
-			   3													Portland, Oregon
-		greater than three											Baton Rouge, LA
-		  less than zero											Chernobyl, Ukraine
+Part 3
+The end result will look similar to this example:
 
-   [X]Mode of Transporation
-    The user’s mode of transportation will determined by the user’s favorite color.
+"Tara Cat will retire in 14 years with $1,000,000.03 in the bank, a 
+vacation home at The Bahamas and travels in a Hot Air Baloon."
 
-    (condition) If the user’s favorite color is…	(example) then the user’s mode of transportation will be…
-				red														Maserati
-				orange													stallion
-				yellow													chariot
-				green													  taxi
-				blue													rickshaw
-				indigo												  motor scooter
-				violet												  flying saucer
+Part 4
+Example Coding
 
-   [X]Bank Balance
-    The user’s bank balance at retirement will be based on the user’s birth month. 
-    If the user enters something other than 1-12 for birth month, the user’s balance will be $0.00.
+First Name:
+	System.out.println("Enter First Name: ");
+	String firstName = input.nextLine();
 
-    (condition) If the user’s birth month is…	(example) The user’s balance will be…
-				1-4										$256,000.76
-				5-8									   	$3,687,105.42
-				9-12									$86.23
-		   anything else								$0.00
+Last Name:
+	System.out.println("Enter Last Name: ");
+	String lastName = input.nextLine();
 
-[X]Part 3
-   Display the user’s fortune in this format:
+Age:
+	System.out.println("Enter your age: "); // retirement age is 67
+	int age = input.nextInt();
 
-   *[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank balance]* in the bank,
-   a vacation home in *[location]*, and travel by *[mode of transporation]*.
+	if (age % 2 != 0) { // age is odd
+	} else if (age % 2 == 0) { // age is even
+	}
 
-   Your program should be able to process input whether a user enters capital or lowercase letters.
+Birth Month:
+	System.out.println("What is your Birth Month in mm status?");
+	System.out.println("Example: January would be 1");
+	int birthMonth = input.nextInt();
+	String bankBalance = "";
+
+		} else if ((birthMonth == 7) || (birthMonth == 8) || (birthMonth == 9)) {
+		bankBalance = "$1,000,000.03";
+
+Favorite ROYGBIV:
+	System.out.println("What is your favorite ROYGBIV color? ");
+	System.out.println("If unsure please type in Help.");
+	String roygbiv = input.next();
+	String vic = "";
+
+		case "violet":
+		vic = "Hot Air Baloon";
+		break;
+
+Number of Siblings:
+	System.out.println("How many Siblings?");
+	int sibling = input.nextInt();
+	
+	String location = "";
+
+		} else if (sibling > 3) {
+		location = "The Bahamas";
+		}
 
 
-Stretch Tasks (Optional)
-
-[]Tip: To do this with the prompts that expect an integer, you will need to read in a String, check for “Quit”, then use Integer.parseInt(value) to convert the user input to an int.
-	Also tip: You can call System.exit(0); to terminate your program immediately.
-
-[] Research while (page 115 in the Head Start book) or do/while loops and use them to check whether a user typed “Help” for favorite color, printing the list of colors each time the user types “Help”.
-
-  What is your favorite ROYGBIV color?
-  Help
-  The ROYGBIV colors are red, orange, yellow, green, blue, indigo, violet.
-  Help
-  The ROYGBIV colors are red, orange, yellow, green, blue, indigo, violet.
-  Blue
 
 
-GRADING
-
-Rubric for Fortune Teller
-
-                                               Task                                                                   Points
-Prompts for and stores:																									–
-first name (String)																										6
-last name (String)																										6
-age (int)																												6
-birth month (int)																										6
-favorite color (String)																									6
-number of siblings (int)																								6
-Displays ROYGBIV help if the user types “Help”																			6
-Prompts for a favorite color and stores the value after displaying help if the user typed “Help”						6
-
-Calculates and stores:																									–
-years until retirement based on odd or even age																			8
-vacation home location based on number of siblings																		8
-mode of transportation based on favorite color																			8
-bank balance based on birth month																						8
-Display the fortune in the specified format																				10
-Style/formatting/code quality:																							10
-
-Total:																													100
+Software Used
+1. Eclipse IDE
+2. Sublime (for readme.txt)

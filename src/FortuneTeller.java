@@ -6,19 +6,11 @@ public class FortuneTeller {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in); // Recommend to Memorize
 
-
 		System.out.println("Fortune Teller");
 		System.out.println("Type Quit to exit at any time.");
-		String exit = "";
-		if (exit.equalsIgnoreCase("Quit")) {
-			String exit = "";
-			System.out.println("Unlucky, please come back again");
-			System.exit(0);
-		}
 
 		System.out.println("Enter First Name: ");
 		String firstName = input.nextLine();
-
 		System.out.println("Enter Last Name: ");
 		String lastName = input.nextLine();
 
@@ -98,16 +90,11 @@ public class FortuneTeller {
 
 		// Display the user’s fortune in this format:
 		System.out.print(firstName + " " + lastName + " will retire in " + (67 - age));
-		System.out.print(" years with " + bankBalance + " in the bank, a vacation home in ");
-		System.out.println(location + ", and travel in a " + vic);
-
-		// switch (exit) {
-		// case "Quit":
-		// System.out.println("Nobody likes a quitter.");
-		// System.exit(0);
-		// }
+		System.out.print(" years with " + bankBalance + " in the bank, a vacation home at ");
+		System.out.println(location + ", and travel in a " + vic + ".");
 
 		input.close();
+
 	}
 
 }
