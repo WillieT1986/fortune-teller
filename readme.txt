@@ -69,9 +69,9 @@ Age:
 	System.out.println("Enter your age: "); // retirement age is 67
 	int age = input.nextInt();
 
-	if (age % 2 != 0) { // age is odd
-	} else if (age % 2 == 0) { // age is even
-	}
+		if (age % 2 != 0) { // age is odd
+		} else if (age % 2 == 0) { // age is even
+		}
 
 Birth Month:
 	System.out.println("What is your Birth Month in mm status?");
