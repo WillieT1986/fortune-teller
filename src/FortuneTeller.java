@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class FortuneTeller {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in); // Recommend to Memorize
+		Scanner input = new Scanner(System.in);
 
 		System.out.println("Fortune Teller");
 		System.out.println("Type Quit to exit at any time.");
@@ -14,7 +14,7 @@ public class FortuneTeller {
 		System.out.println("Enter Last Name: ");
 		String lastName = input.nextLine();
 
-		System.out.println("Enter your age: "); // retirement age is 67
+		System.out.println("Enter your age: ");
 		int age = input.nextInt();
 
 		if (age % 2 != 0) { // age is odd
@@ -70,7 +70,6 @@ public class FortuneTeller {
 			System.out.println("Please Try Again.");
 			System.exit(0);
 		}
-		
 
 		System.out.println("How many Siblings?");
 		int sibling = input.nextInt();
@@ -88,7 +87,6 @@ public class FortuneTeller {
 			location = "The Bahamas";
 		}
 
-		// Display the user’s fortune in this format:
 		System.out.print(firstName + " " + lastName + " will retire in " + (67 - age));
 		System.out.print(" years with " + bankBalance + " in the bank, a vacation home at ");
 		System.out.println(location + ", and travel in a " + vic + ".");
