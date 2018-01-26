@@ -68,7 +68,6 @@ public class FortuneTeller {
 		case "help":
 			System.out.println("ROYGBIV stands for Red, Orange, Yellow, Green, Blue, Indigo & Violet.");
 			System.out.println("Please Try Again.");
-			System.exit(0);
 		}
 
 		System.out.println("How many Siblings?");
